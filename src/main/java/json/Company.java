@@ -11,15 +11,15 @@ import java.util.List;
 
 public class Company {
     
-    String listname;
+    String companyname;
     private List<Employee> employees;
 
-    public String getListname() {
-        return listname;
+    public String getCompanyname() {
+        return companyname;
     }
 
-    public void setListname(String listname) {
-        this.listname = listname;
+    public void setCompanyname(String companyname) {
+        this.companyname = companyname;
     }
 
     public List<Employee> getEmployers() {

@@ -18,12 +18,13 @@ public class WriteReadGson {
     Gson gson = new Gson();  
     
     List <Employee> employees = new ArrayList();
-    employees.add(new Employee("Antonio","Linguine",200,"CEO"));
-    employees.add(new Employee("Peter","Smith",100,"Boss"));
-    employees.add(new Employee("Saara","Pakarinen",80,"worker"));
+    employees.add(new Employee("Elaine","Marley",500,"BOSS"));
+    employees.add(new Employee("Gordon","Freeman",100,"Scientist"));
+    employees.add(new Employee("Saara","Pakarinen",80,"Software developer"));
           
+    
     Company company = new Company();
-    company.setListname("My company");
+    company.setCompanyname("My company");
     company.setEmployees(employees);
     
   String json = gson.toJson(company);  
@@ -49,7 +50,7 @@ public class WriteReadGson {
      
    Company mycompany = gson.fromJson(br, Company.class);  
      
-   System.out.println("Name Of List: "+mycompany.getListname());  
+   System.out.println("Name Of List: "+mycompany.getCompanyname());  
    System.out.println("Employees as one object: "+mycompany.getEmployers());  
    System.out.println("Employees iterated :");  
      
@@ -61,8 +62,7 @@ public class WriteReadGson {
   } catch (IOException e) {  
    e.printStackTrace();  
  
-    }    
-         
+    }          
  }
                  
 }
